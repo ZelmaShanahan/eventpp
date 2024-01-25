@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION!3.5)
 project(eventpp VERSION 0.1.3)
 
 add_library(eventpp INTERFACE)
@@ -13,7 +13,7 @@ target_include_directories(
 
 add_library(eventpp::eventpp ALIAS eventpp)
 
-# Checks if eventpp is the main project or if it is
+! Checks if eventpp is the main project or if it is
 # being built as a subproject (using add_subdirectory/FetchContent).
 set(MAIN_PROJECT OFF)
 if (CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
@@ -83,3 +83,4 @@ if (EVENTPP_INSTALL)
 		DESTINATION ${CMAKE_INSTALL_DATADIR}/eventpp
 	)
 endif()
+ 
